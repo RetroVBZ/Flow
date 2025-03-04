@@ -1,0 +1,201 @@
+.create-new{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    place-content: center;
+    width:100%;
+    height: 100%;
+    display: inline-block; /* Makes the link behave like a block element */
+    font-size: 16px; /* Sets the font size */
+    color: #37474f; /* Text color */
+    text-decoration: none; /* Removes underline */
+    text-align: center; /* Centers the text */
+    background-color: #e0f7fa;
+
+    transition: background-color 0.3s; /* Adds a smooth transition effect */
+    border: none;
+}
+.create-new:hover{
+    background-color: #5b8287;
+    color: #e0f7fa;
+}
+body.darkmode {
+    background-color: #0D47A1;
+}
+
+.card.darkmode {
+    background-color: #37474f;
+    color: #ECEFF1;
+}
+.grid{
+    display: grid;
+    gap: 50px;
+    grid-template-columns: 25vw auto auto;
+    overflow: hidden;
+    height: 100vh;
+}
+.dashboard{
+    height:100%;
+    background-color: #e0f7fa;
+    display:grid;
+    text-align: center;
+}
+.dashboard > div{
+    grid-template-rows: 50px 50px 50px;
+}
+.dashboard > div > a{
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    place-content: center;
+    width:100%;
+    height: 100%;
+    display: inline-block; /* Makes the link behave like a block element */
+    font-size: 16px; /* Sets the font size */
+    color: #37474f; /* Text color */
+    text-decoration: none; /* Removes underline */
+    text-align: center; /* Centers the text */
+
+    transition: background-color 0.3s; /* Adds a smooth transition effect */
+}
+.dashboard > div > a:hover{
+    color:#e0f7fa;
+    background-color: #5b8287;
+}
+.meditation{
+    height: 10vh;
+}
+.name{
+    height: 10vh;
+}
+
+.table{
+    grid-column-start: 2;
+}
+.table {
+    grid-column: 2 / span 6;
+    text-align: center;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 20px;
+}
+
+.table > div[class$="_header"] {
+    background-color: #80CBC4;
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    padding: 20px 0;
+    align-content: center;
+   
+}
+
+.table > .background {
+    grid-template-rows: repeat(10 1fr);
+    background-color: #B39DDB;
+    padding: 10px 0;
+}
+
+.table > div > div {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    height:100%;
+    background-color: #B39DDB;
+    align-content: center;
+}
+.table .card {
+    background-color: white;
+    padding: 50px;
+    gap:10px;
+    margin: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: grid;
+    cursor: pointer;
+    font-family: 'Open Sans', sans-serif;
+    overflow: scroll;
+}
+.edit-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+    
+.edit-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+}
+    
+.edit-form input,
+.edit-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+    
+.edit-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+}
+    
+.edit-buttons button {
+    padding: 8px 16px;
+    font-size: 14px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+    
+.edit-buttons .save-button {
+    background-color: #4CAF50;
+    color: white;
+}
+    
+.edit-buttons .cancel-button {
+    background-color: #f44336;
+    color: white;
+}
+.create-overlay{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999;
+}
+.create-form {
+    background-color: white;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-rows: auto auto auto;
+    gap: 10px;
+}
+.create-form input,
+.create-form textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+}
+.dashboard.darkmode{
+    background-color: #263238;
+}
+.dashboard > div.darkmode{
+    background-color: #263238;
+}
+.dashboard a.darkmode{
+    color: #ECEFF1;
+}

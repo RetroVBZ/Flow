@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="/static/css/style.css">
+  <link rel="stylesheet" href="href=https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap">
+  <script src="/static/scripts/script.js"></script>
+  <style>
+    body.darkmode {
+        background-color: #0D47A1;
+    }
+    .dashboard.darkmode {
+        background-color: #263238;
+    }
+    .dashboard a.darkmode {
+        color: #ECEFF1;
+    }
+    .card_creation a.darkmode{
+        background-color: #263238;
+        color:#ECEFF1;
+    }
+    </style>
+</head>
+<body>
+    <div class="grid">
+        <div class='dashboard'>
+            <div class="name">
+                <a>Flow</a>
+            </div>
+            <div class="card_creation">
+                <a class="create-new">Create New Task</a>
+                <div class="create-overlay" style="display: none;">
+                    <div class="create-form">
+                        <input type="text" class="new-title" placeholder="Title">
+                        <textarea class="new-description" placeholder="Description"></textarea>
+                        <div class="save-area">
+                            <button class="save-upcoming">Upcoming</button>
+                            <button class="save-late">Late</button>
+                            <button class="save-ongoing">On-going</button>
+                            <button class="save-finished">Finished</button>
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="home">
+                <a>Dashboard</a>
+            </div>
+            <div class="tasks">
+                <a href="/tasks.html">Tasks</a>
+            </div>
+            <div class="history">
+                <a href="/history.html">History</a>
+            </div>
+            <div class="reports">
+                <a href="/reports.html">Reports</a>
+            </div>
+            <div class="self_meditation">
+                <a href="/self_meditation.html">Self Meditation</a>
+            </div>
+            <div class="meditation">
+                <a href="/meditation.html">Guided meditation</a>
+            </div>
+            <div class="settings">
+                <a href="/settings.html">Settings</a>
+            </div>
+            <div class="search">
+                <a>Search</a>
+            </div>
+            <div class="view_mode">
+                <a id="toggle-scheme">light and dark</a>
+            </div>
+            <div class="profile">
+                <a href="/">Profile</a>
+            </div>
+        </div>
+        <div class='table'>
+            <div class="tasks_header">
+                Upcoming
+                <div class="background">
+                    <div class="card">
+                        <h3>Card 1</h3>
+                        <p>Description 1</p>
+                    </div>
+                    <div class="card">
+                        <h3>Card 4</h3>
+                        <p>Description 4</p>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="pending_header">
+                Late
+                <div class="background">
+                    <div class="card">
+                        <h3>Card 2</h3>
+                        <p>Description 2</p>
+                    </div>
+                    <div class="card">
+                        <h3>Card 1</h3>
+                        <p>Description 1</p>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="on-going_header">
+                On-Going
+                <div class="background">
+                    <div class="card">
+                        <h3>Card 3</h3>
+                        <p>Description 3</p>
+                    </div>
+                    <div class="card">
+                        <h3>Card 1</h3>
+                        <p>Description 1</p>
+                    </div>
+                </div>
+            </div>
+  
+            <div class="finished_header">
+                Finished
+                <div class="background">
+                    <div class="card">
+                        <h3>Card 4</h3>
+                        <p>Description 4</p>
+                    </div>
+                    <div class="card">
+                        <h3>Card 1</h3>
+                        <p>Description 1</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+                document.getElementById('toggle-scheme').addEventListener('click', function (event) {
+                    console.log("Toggle scheme clicked");
+                    event.preventDefault();
+                    document.body.classList.toggle('darkmode');
+                    console.log("Body darkmode:", document.body.classList.contains('darkmode'));
+        
+                    const dashboard = document.querySelector('.dashboard');
+                    dashboard.classList.toggle('darkmode');
+                    console.log("Dashboard darkmode:", dashboard.classList.contains('darkmode'));
+        
+                    const links = document.querySelectorAll('.dashboard a');
+                    links.forEach(link => {
+                        link.classList.toggle('darkmode');
+                        console.log("Link darkmode:", link.classList.contains('darkmode'));
+                    });
+        
+                    const button = document.querySelector('.card_creation a');
+                    button.classList.toggle('darkmode');
+                    console.log("Button darkmode:", button.classList.contains('darkmode'));
+                });
+            });
+        </script>        
+    </div>
+    <div class="edit-overlay" style="display: none;">
+        <div class="edit-form">
+            <input type="text" class="edit-title" placeholder="Title">
+            <textarea class="edit-description" placeholder="Description"></textarea>
+            <div class="edit-buttons">
+                <button class="save-button">Save</button>
+                <button class="cancel-button">Cancel</button>
+            </div>
+        </div>
+    </div>
+    <script src="/static/scripts/script.js"></script>
+</body>
+ </html>
